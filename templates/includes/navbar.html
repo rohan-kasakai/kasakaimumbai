@@ -40,12 +40,10 @@
         <i class="fa fa-bars"></i> Community
       </button>
       <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">Formula 1</a>
-        <a class="dropdown-item" href="#">Open mic</a>
-        <a class="dropdown-item" href="#">Housie</a>
-        <a class="dropdown-item" href="#">Turf meets</a>
-        <a class="dropdown-item" href="#">Board games</a>
-        <a class="dropdown-item" href="#">Book discussion</a>
+        <a class="dropdown-item" href="{% url 'events' %}">All events</a>
+        {% for Community in links %}
+        <a class="dropdown-item" href="{{ community.get_url }}">{{ Community.Community_name }}</a>
+        {% endfor %}
       </div>
     </div>  <!-- category-wrap.// -->
   </div> <!-- col.// -->

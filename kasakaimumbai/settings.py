@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'Community',
+    'accounts',
+    'events',
 ]
 
 MIDDLEWARE = [
@@ -62,6 +65,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'Community.context_processors.menu_links',
             ],
         },
     },
@@ -69,6 +73,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'kasakaimumbai.wsgi.application'
 
+AUTH_USER_MODEL = 'accounts.Account'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
@@ -122,3 +127,7 @@ STATIC_ROOT = BASE_DIR /'static'
 STATICFILES_DIRS =[
     'kasakaimumbai/static',
 ]
+
+#media files configuration
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR/'media'
