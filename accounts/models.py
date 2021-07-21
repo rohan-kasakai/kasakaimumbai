@@ -41,7 +41,7 @@ class Account(AbstractBaseUser):
     last_name               = models.CharField(max_length=50)
     username                = models.CharField(max_length=50, unique=True)
     email                   = models.EmailField(max_length=50, unique=True)
-    Phone_number            = models.CharField(max_length=50)
+    phone_number            = models.CharField(max_length=50)
 
     # required
 

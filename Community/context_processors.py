@@ -1,4 +1,4 @@
-from . models import Community
+from .models import Community
 
 def menu_links(request):
     links = Community.objects.all()

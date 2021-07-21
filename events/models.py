@@ -1,5 +1,7 @@
+from typing import Reversible
 from django.db import models
 from Community.models import Community
+from django.urls import reverse
 
 # Create your models here.
 
@@ -15,5 +17,10 @@ class Event(models.Model):
     created_date = models.DateTimeField(auto_now_add=True)
     modified_date = models.DateTimeField(auto_now_add=True)
 
+    def get_url(self):
+        return reverse('event_detail', args=[self.community.slug, self.slug])
+
+
     def __str__(self):
         return self.event_name
+

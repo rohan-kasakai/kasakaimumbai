@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'Community',
     'accounts',
     'events',
+    'carts',
 ]
 
 MIDDLEWARE = [
@@ -66,6 +67,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'Community.context_processors.menu_links',
+                'carts.context_processors.counter',
             ],
         },
     },
@@ -131,3 +133,17 @@ STATICFILES_DIRS =[
 #media files configuration
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR/'media'
+
+
+from django.contrib.messages import constants as messages
+MESSAGE_TAGS = {
+    messages.ERROR: 'danger',
+}
+
+
+#SMTP CONFIGURATION
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'kkmmanger@gmail.com'
+EMAIL_HOST_PASSWORD = 'kasakai'
+EMAIL_USE_TLS = True
