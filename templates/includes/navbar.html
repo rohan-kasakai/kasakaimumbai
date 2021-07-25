@@ -18,6 +18,11 @@
       <a href="#" class="nav-link"> USD </a>
     </li>
     </ul>
+    <ul class="navbar-nav mr-auto">
+			<li>
+				<a href="" class="nav-link">kasakaimumbai.com</a>
+			</li>
+		</ul>
     <ul class="navbar-nav">
     <li><a href="#" class="nav-link"> <i class="fa fa-envelope"></i> Email </a></li>
     <li><a href="#" class="nav-link"> <i class="fa fa-phone"></i> Call us </a></li>
@@ -69,17 +74,24 @@
           <div class="widget-header">
             <small class="title text-muted">Kasa Kai!</small>
             <div>
-              <a href="{% url 'login' %}">Sign in</a> <span class="dark-transp"> | </span>
-              <a href="{% url 'register' %}"> Register</a>
+              <a href="{% url 'Login' %}">Sign in</a> <span class="dark-transp"> | </span>
+              <a href="{% url 'Signup' %}"> Register</a>
             </div>
           </div>
           {% else %}
           <div class="widget-header">
-            <small class="title text-muted">Welcome {{user.first_name}}!</small>
-            <div>
-              <a href="#">Dashboard</a> <span class="dark-transp"> | </span>
-              <a href="{% url 'logout' %}">Logout</a>
-            </div>
+            {% if user.is_authenticated %}
+              <strong class="title text-muted">Welcome, {{ user.username }}!</strong>
+              <div class="text-center">
+                <a href="{% url 'Logout' %}">Log out</a>
+              </div>
+            {% else %}
+              <strong class="title text-muted">Welcome, Guest!</strong>
+              <div class="text-center">
+                <a href="{% url 'Login' %}">Log in</a> <span class="dark-transp"> | </span>
+                <a href="{% url 'Signup' %}"> Sign up</a>
+              </div>
+            {% endif %}
           </div>
           {% endif %}
           <a href="{% url 'cart' %}" class="widget-header pl-3 ml-3">
