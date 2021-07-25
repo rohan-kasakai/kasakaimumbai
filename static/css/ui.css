@@ -463,8 +463,6 @@ p:last-child {
 }
 .widget-header .notify {
   position: absolute;
-  top: -3px;
-  right: -10px;
 }
 .widget-header:hover i {
   color: #3167eb;
@@ -1046,8 +1044,6 @@ a[class*=card]:hover .title {
 
 .notify {
   position: absolute;
-  top: -4px;
-  right: -10px;
   display: inline-block;
   padding: 0.25em 0.6em;
   font-size: 12px;
@@ -1091,12 +1087,7 @@ a[class*=card]:hover .title {
 }
 
 /* ====================== block ==================== */
-.box {
-  padding: 18px;
-  background: #fff;
-  border-radius: 0.37rem;
-  border: 1px solid #e4e4e4;
-}
+
 .box img {
   max-width: 100%;
 }
