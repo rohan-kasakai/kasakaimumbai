@@ -17,12 +17,13 @@
                 <ul>
                     <li><a href="{% url 'events' %}">All Events</a></li>
                     {% for Community in links %}
-                        <li><a href="{{ community.get_url }}">{{ Community.Community_name }}</a></li>
+                        <li><a href="{{ Community.get_url }}">{{ Community.Community_name }}</a></li>
                     {% endfor %}
                 </ul>
             </li>
 
             <li><a href="{% url 'events' %}">EVENTS</a></li>
+            <li><a href="#">BLOGS</a></li>
         </div>
         <div class="search-icon">
             <span class="fas fa-search"></span>
