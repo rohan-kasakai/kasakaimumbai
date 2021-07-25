@@ -9,11 +9,11 @@ class RegistrationForm(forms.ModelForm):
     confirm_password = forms.CharField(widget=forms.PasswordInput(attrs={
         'placeholder': 'Confirm Password'
     }))
-    
 
     class Meta:
         model = Account
-        fields = ['first_name', 'last_name', 'phone_number', 'email', 'password']
+        fields = ['first_name', 'last_name',
+                  'phone_number', 'email', 'password']
 
     def clean(self):
         cleaned_data = super(RegistrationForm, self).clean()
@@ -24,7 +24,6 @@ class RegistrationForm(forms.ModelForm):
             raise forms.ValidationError(
                 "Password does not match!"
             )
-
 
     def __init__(self, *args, **kwargs):
         super(RegistrationForm, self).__init__(*args, **kwargs)
