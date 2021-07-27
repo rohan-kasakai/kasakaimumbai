@@ -21,15 +21,17 @@ footer .content{
   flex-wrap: wrap;
   justify-content: space-between;
 }
-footer .content p,a{
+footer .content p, 
+footer .content a{
   color: #fff;
+  font-size: 13px;
 }
 footer .content .box{
   width: 33%;
   transition: all 0.4s ease;
 }
 footer .content .topic{
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 600;
   color: #13b1cd;
   margin-bottom: 16px;

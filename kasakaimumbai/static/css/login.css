@@ -1,0 +1,49 @@
+.login_div{
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.login_div h1{
+    font-weight: 530;
+}
+
+.login_div .login button{
+    background-color: #13b1cd;
+    color: black;
+    font-weight: 500;
+    width: 90px;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.login_div .login button:hover{
+    opacity: 0.6;
+}
+
+.login_div_1{
+    padding: 10px;
+    display: inline-block;
+    border: 1px solid gray;
+    border-radius: 10px;
+    width: 30vw;
+}
+
+.login_div_1 .socialaccount_providers{
+    list-style: none;
+}
+
+.login_div_1 .socialaccount_providers a{
+    background-color: rgb(241, 54, 54);
+    color: white;
+    padding: 5px 20px;
+    border-radius: 5px;
+}
+.login_div_1 input{
+    margin: 0px 10px;
+    border-radius: 3px;
+}
+.login_div_1 p label{
+    font-weight: 500;
+}

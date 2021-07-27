@@ -1,0 +1,17 @@
+.logout_div{
+    margin: 20px;
+    padding: 10px;
+    text-align: center;
+}
+
+.logout_div h1{
+    font-weight: 530;
+    margin-bottom: 80px;
+}
+
+.logout_div button{
+    background-color: rgb(241, 54, 54);
+    color: white;
+    padding: 5px 20px;
+    border-radius: 5px;
+}
